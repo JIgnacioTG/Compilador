@@ -1,0 +1,65 @@
+	MOV x, 2;
+	MOV y, 1;
+	MOV a, 2;
+	MOV b, 3.4;
+	MOV a, 5;
+	JMP Ciclo1;
+Ciclo1:
+	MOV BL, 4;
+	MOV BH, 2;
+	MUL BL, BH;
+	MOV BH, 2;
+	MUL BL, BH;
+	MOV AL, BL;
+	MOV CL, a;
+	DIV CL;
+	MOV BL, AL;
+	MOV b, BL;
+	JMP Ciclo2;
+Ciclo2:
+	MOV BL, 3;
+	MOV BH, 2;
+	ADD BL, BH;
+	MOV x, BL;
+	JMP Condicion1;
+Condicion1:
+	MOV AL, x;
+	CMP AL, 1;
+	JL Ciclo2;
+	JMP Condicion2;
+Condicion2:
+	MOV AL, b;
+	CMP AL, 9;
+	JLE Ciclo1;
+	JMP Ciclo3;
+Ciclo3:
+	MOV BL, x;
+	MOV BH, 5;
+	MUL BL, BH;
+	MOV a, BL;
+	JMP Condicion3;
+Condicion3:
+	MOV AL, a;
+	CMP AL, y;
+	JGE Ciclo3;
+	JMP Ciclo3pr2;
+Ciclo3pr2:
+	MOV BL, b;
+	MOV AH, 0;
+	MOV AL, BL;
+	MOV CL, x;
+	DIV CL;
+	MOV BL, AL;
+	MOV y, BL;
+	JMP Condicion4;
+Condicion4:
+	MOV AL, y;
+	CMP AL, 1;
+	JG Ciclo3;
+	JMP Final;
+Final:
+	MOV BL, 2;
+	MOV BH, 1;
+	MUL BL, BH;
+	MOV a, BL;
+	FIN

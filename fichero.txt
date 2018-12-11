@@ -1,0 +1,22 @@
+int x=2;
+double y=1;
+int a=2;
+double b=3.4;
+a=5;
+do
+{
+	b=a/2(2*4);
+	do
+	{
+		x=2+3;
+	}while(x<1);
+}while(b<=9);
+do
+{
+	do
+	{
+		a=5*x;
+	}while(a>=y);
+	y=x/b;
+}while(y>1);
+a=1*2;
